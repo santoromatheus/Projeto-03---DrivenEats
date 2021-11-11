@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VeganBox</title>
+
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+  <body>
+    <div class="topo">
+      <h1>VeganBox</h1>
+      <h2>Monte seu box e receba em 15 minutos!</h2>
+    </div>
+
+    <div class="conteudo">
+      <h3>Primeiro, seu prato</h3>
+      <div class="produtos pratos">
+        <div
+          class="produto"
+          onclick="selecionarPrato(this, 'Empanadinhos Sem-Frango', 27.30)"
+        >
+          <img src="imagens/frango.jpg" />
+          <h4>Empanadinhos Sem-Frango</h4>
+          <p>Creme de milho, arroz integral e legumes assados</p>
+          <p class="preco">R$ 27,30</p>
+          <ion-icon name="checkmark-circle" class="check"></ion-icon>
+        </div>
+
+        <div
+          class="produto"
+          onclick="selecionarPrato(this, 'Feijuca do Futuro', 25.70)"
+        >
+          <img src="imagens/feijuca.jpg" />
+          <h4>Feijuca do Futuro</h4>
+          <p>Arroz, couve refogada e tofu defumado</p>
+          <p class="preco">R$ 25,70</p>
+          <ion-icon name="checkmark-circle" class="check"></ion-icon>
+        </div>
+
+        <div
+          class="produto"
+          onclick="selecionarPrato(this, 'Paella de Frutos do Mato', 20.90)"
+        >
+          <img src="./imagens/paella_de_frutos_do_mato.jpeg" />
+          <h4>Paella de Frutos do Mato</h4>
+          <p>Brócolis, tomates confit e alga nori</p>
+          <p class="preco">R$ 20,90</p>
+          <ion-icon name="checkmark-circle" class="check"></ion-icon>
+        </div>
+      </div>
+
+      <h3>Agora, sua bebida</h3>
+      <div class="produtos bebidas">
+        <div
+          class="produto"
+          onclick="selecionarBebida(this, 'Refrigerante Wewi', 5.80)"
+        >
+          <img src="imagens/wewi.jpg" />
+          <h4>Refrigerante Wewi</h4>
+          <p>
+            Wewi é um refri livre de conservantes, sódio e qualquer ingrediente
+            artificial, orgânico e 100% natural. Cola, guaraná ou laranja. Vai
+            na sorte.
+          </p>
+          <p class="preco">R$ 5,90</p>
+          <ion-icon name="checkmark-circle" class="check"></ion-icon>
+        </div>
+
+        <div
+          class="produto"
+          onclick="selecionarBebida(this, 'Mil Shake Vegan', 10.50)"
+        >
+          <img src="./imagens/milk-shake-isis-freitag-670-97b4324c.jpeg" />
+          <h4>
+            Mil Shake Vegan
+          </h4>
+          <p>
+            Chocolate, banana e morango. Vai na sorte.
+          </p>
+          <p class="preco">R$ 10,50</p>
+          <ion-icon name="checkmark-circle" class="check"></ion-icon>
+        </div>
+
+        <div
+          class="produto"
+          onclick="selecionarBebida(this, 'Suco Verde', 4.50)"
+        >
+          <img src="imagens/suco.jpg" />
+          <h4>
+            Suco Verde
+          </h4>
+          <p>
+            Antioxidante
+          </p>
+          <p class="preco">R$ 4,50</p>
+          <ion-icon name="checkmark-circle" class="check"></ion-icon>
+        </div>
+      </div>
+
+      <h3>Por fim, sua sobremesa</h3>
+      <div class="produtos sobremesas">
+        <div
+          class="produto"
+          onclick="selecionarSobremesa(this, 'Mousse de Maracujá', 9.50)"
+        >
+          <img src="imagens/mousse.jpg" />
+          <h4>Mousse de Maracujá</h4>
+          <p>Creme de tofu e castanha de caju</p>
+          <p class="preco">R$ 9,50</p>
+          <ion-icon name="checkmark-circle" class="check"></ion-icon>
+        </div>
+
+        <div
+          class="produto"
+          onclick="selecionarSobremesa(this, 'Brownie de Chocolate e Nozes', 8.90)"
+        >
+          <img src="imagens/brownie.jpg" />
+          <h4>Brownie de Chocolate e Nozes</h4>
+          <p>Chocolate 100% cacau</p>
+          <p class="preco">R$ 8,90</p>
+          <ion-icon name="checkmark-circle" class="check"></ion-icon>
+        </div>
+
+        <div
+          class="produto"
+          onclick="selecionarSobremesa(this, 'Bolo de Banana com Amêndoas e Sem Açúcar', 9.00)"
+        >
+          <img src="./imagens/bolo_de_banana_com_amendoas.jpeg" />
+          <h4>Bolo de Banana com Amêndoas e Sem Açúcar</h4>
+          <p>Aveia, Linhaça, Chia E Canela - Sem Açúcar</p>
+          <p class="preco">R$ 9,00</p>
+          <ion-icon name="checkmark-circle" class="check"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="botao" onclick="confirmarPedido()">
+        Selecione os 3 itens<br />para fechar o pedido
+      </div>
+    </footer>
+
+    <div class="tela-confirmar-dados">
+      <div class="confirme-pedido">
+        <p>Confirme seu pedido</p>
+        <div class="confirmar-produto">
+          <p class="confirmar-nome-prato"></p>
+          <p class="confirmar-preco-prato"></p>
+        </div>
+        <div class="confirmar-produto">
+          <p class="confirmar-nome-bebida"></p>
+          <p class="confirmar-preco-bebida"></p>
+        </div>
+        <div class="confirmar-produto">
+          <p class="confirmar-nome-sobremesa"></p>
+          <p class="confirmar-preco-sobremesa"></p>
+        </div>
+        <div class="confirmar-combo">
+          <p>TOTAL</p>
+          <p class="confirmar-preco-total"></p>
+        </div>
+        <div class="botao-pode-pedir" onclick="enviarPedido()">
+          Tudo certo, pode pedir!
+        </div>
+        <div class="cancelar" onclick="cancelarPedido()">
+          Cancelar
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
+

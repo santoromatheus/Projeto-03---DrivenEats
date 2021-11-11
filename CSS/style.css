@@ -1,0 +1,401 @@
+body {
+  background: #880000;
+  font-family: "Roboto";
+}
+
+.topo {
+  width: 100%;
+  height: 92px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 0 18px 21px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: red;
+  color: white;
+}
+
+.conteudo {
+  width: 100%;
+
+  margin-top: 92px;
+  padding: 4px 0 108px 19px;
+}
+
+.produtos {
+  display: flex;
+  overflow: scroll;
+  gap: 16px;
+}
+
+.produto {
+  width: 172px;
+
+  padding: 18px 14px 16px 14px;
+  position: relative;
+
+  background: white;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  border-radius: 9px;
+}
+
+h1 {
+  font-family: "Righteous";
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 55px;
+
+  margin: 0;
+  margin-bottom: 5px;
+  letter-spacing: -0.012em;
+  text-align: left;
+
+  color: #ffffff;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+
+  margin: 0;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: #ffffff;
+}
+
+h3 {
+  font-family: Righteous;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+
+  margin-top: 27px;
+  margin-bottom: 17px;
+  letter-spacing: 0.018em;
+  text-align: left;
+
+  color: #ffffff;
+}
+
+h4 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+
+  margin-top: 0;
+  margin-bottom: 5px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: #333333;
+}
+
+img {
+  width: 130px;
+  border-radius: 5px;
+  float: right;
+  margin-left: 15px;
+}
+
+p {
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px;
+
+  margin: 15px 0 0 0;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: #a6a6a6;
+}
+
+.preco {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: #000000;
+}
+
+.produto .check {
+  font-size: 20px;
+
+  position: absolute;
+  right: 12.78px;
+  bottom: 15.78px;
+
+  opacity: 0;
+  color: #32b72f;
+}
+
+.produto.selecionado .check {
+  opacity: 1;
+}
+
+.produto.selecionado {
+  padding: 13px 9px;
+
+  border: 5px solid #32b72f;
+}
+
+footer {
+  width: 100%;
+  height: 92px;
+
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffffff;
+}
+
+footer .botao.validado {
+  background-color: #32b72f;
+  font-weight: 700;
+}
+
+.botao {
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  width: 364px;
+  height: 61px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  line-height: 23px;
+  letter-spacing: 0.018em;
+  text-align: center;
+
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  background: #cbcbcb;
+}
+
+img {
+  width: 144px;
+  height: 87px;
+
+  margin-bottom: 8px;
+}
+
+.tela-confirmar-dados {
+  width: 100%;
+  height: 100%;
+
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.aparecer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sumir {
+  display: none;
+}
+
+.tela-confirmar-dados p {
+  margin: 0;
+}
+
+.confirme-pedido {
+  width: 376px;
+  height: 353px;
+
+  margin: auto 19px;
+  padding: 21px 16px 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #ffffff;
+  background: #50d074;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+
+.tela-confirmar-dados .confirme-pedido > p:first-child {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+
+  width: 376px;
+  height: 27px;
+
+  margin-bottom: 28px;
+
+  color: #ffffff;
+}
+
+.tela-confirmar-dados .confirme-pedido .confirmar-produto {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.018em;
+
+  width: 376px;
+  height: 27px;
+
+  margin-bottom: 13px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #ffffff;
+}
+
+.confirmar-produto > p:first-child {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.018em;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 16px;
+  padding-bottom: 13px;
+
+  color: #ffffff;
+}
+
+.confirmar-produto > p:last-child {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.018em;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 16px;
+  padding-bottom: 13px;
+
+  color: #ffffff;
+}
+
+.confirmar-combo {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.018em;
+
+  width: 376px;
+  height: 27px;
+
+  margin-bottom: 24px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #ffffff;
+}
+
+.confirmar-combo p:first-child {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.018em;
+  text-align: left;
+
+  padding-left: 16px;
+  padding-bottom: 13px;
+
+  color: #ffffff;
+}
+
+.confirmar-combo p:last-child {
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.018em;
+  text-align: right;
+
+  padding-right: 16px;
+  padding-bottom: 13px;
+
+  color: #ffffff;
+}
+
+.botao-pode-pedir {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 0.018em;
+
+  width: 329px;
+  height: 52px;
+
+  cursor: pointer;
+  color: #50d074;
+  background: #ffffff;
+  border-radius: 100px;
+}
+
+.cancelar {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 0.018em;
+
+  width: 333px;
+  height: 52px;
+
+  cursor: pointer;
+  color: #ffffff;
+}
+
